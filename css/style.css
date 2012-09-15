@@ -32,6 +32,8 @@ body {
 
 .page-header h1 {
   font-family: Cloud, sans-serif;
+  font-size: 10em;
+  line-height: 1em;
 }
 
 .page-header h2 {
@@ -53,7 +55,7 @@ body {
   max-height: 200px;
   position : relative;
   margin-top : 50px;
-  box-shadow: 0px 0px 25px #333;
+  /*box-shadow: 0px 0px 25px #333;*/
 }
 
 .cloud > div:not(.extracloud) {
@@ -67,7 +69,7 @@ body {
   border-radius: 500px;
   z-index: -1;
   position: absolute;
-  box-shadow: 0px 0px 25px #333;
+  /*box-shadow: 0px 0px 25px #333;*/
 }
 
 .cloud:after {
@@ -96,7 +98,7 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-color: white;
+  background-color: transparent;
   top: 0;
   left: 0;
   border-radius: 500px;
@@ -106,7 +108,7 @@ body {
 .extracloud::before {
   content: ".";
   color: white;
-  background-color: white;
+  background-color: transparent;
   border-radius: 500px;
   z-index: -1;
   position: absolute;
