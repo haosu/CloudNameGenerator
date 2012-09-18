@@ -33,7 +33,7 @@ window.getProductType = function() {
 }
 
 $(function(){
-  $("#nameButton").click(function(){
-    $("#nameField").html(window.createName());
+  $(".cloud").click(function(){
+    $(".cloud-name h1").html(window.createName());
   });
 });
