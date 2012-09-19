@@ -25,13 +25,20 @@ body {
   text-align: center;
 }
 
+.page-header {
+  margin-top: 50px;
+}
+
 .page-header, .cloud-name {
   border: none;
   color : white;
 }
 
+.hero-unit {
+  padding-bottom: 0;
+}
+
 .cloud-name {
-  padding: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
@@ -44,6 +51,7 @@ body {
   line-height: 1em;
   text-shadow: 1px 1px 1px white, 0 0 0 black;
   color: rgba(255, 255, 255, 0.75);
+  padding : 10px;
 }
 
 .cloud-name h2 {
@@ -71,6 +79,8 @@ body {
   -webkit-user-select: none; 
   -o-user-select: none; 
   cursor : pointer;
+  height: 80px;
+  width : 270px;
 }
 
 .cloud:active {
@@ -87,7 +97,7 @@ body {
 
 .cloud:after, .cloud:before{
   content: ".";
-  color: white;
+  color: transparent;
   background-color: white;
   border-radius: 500px;
   z-index: -1;
@@ -117,26 +127,135 @@ body {
   text-shadow : 0px 0px 3px RGBA(0, 0, 0, 0.2);
 }
 
-.extracloud {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: transparent;
-  top: 0;
-  left: 0;
-  border-radius: 500px;
-  z-index: 0;
+.clouds {
+  position : absolute;
+  top : 0;
+  left : 0;
+  height : 100%;
+  width : 100%;
+  overflow : hidden;
 }
 
-.extracloud::before {
-  content: ".";
-  color: white;
-  background-color: transparent;
-  border-radius: 500px;
-  z-index: -1;
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  margin-top: -100px;
-  margin-left: -60px;
+.clouds .cloud {
+  position : absolute;
+  box-shadow: 0px 0px 10px 0px #fff, 0px 0px 10px 0px #fff;
+  cursor : auto;
 }
+
+.clouds .cloud:before, .clouds .cloud:after {
+  box-shadow: 0px 0px 10px 0px #fff, 0px 0px 10px 0px #fff;
+}
+
+.grass, .dirt{
+  position:  absolute;
+  width : 100%;
+  height : 50px;
+  bottom : 0;
+  left : 0;
+}
+
+.grass {
+  bottom : 50;
+  background-color : green;
+  height : 25px;
+}
+
+.dirt {
+  background-color: maroon;
+}
+
+.left-triangle, .top-left-triangle, .bottom-left-triangle, .flag, .flag-tail {
+  display : inline-block;
+  margin-left : -4px;
+}
+
+.flag {
+  width: 300px;
+  height: 50px;
+  background-color: beige;
+  color: maroon;
+  border-top: 1px solid maroon;
+  border-bottom: 1px solid maroon;
+}
+
+.flag:after {
+  content: "WANT TO BE IN THE CLOUD?";
+  float: left;
+  margin: 15px 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flag-tail {
+  display: inline-block;
+  height: 50px;
+  border-top: 1px solid maroon;
+  border-bottom: 1px solid maroon;
+  margin-left : 0px;
+  position: relative;
+}
+
+.flag-tail:after {
+  height: 36px;
+  width: 35px;
+  background-color: transparent;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-bottom: 1px solid maroon;
+  border-left: 1px solid maroon;
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 5px;
+}
+
+.left-triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 25px 25px 0;
+  border-color: transparent beige transparent transparent;
+  position : relative;
+}
+
+.left-triangle:after {
+  content: ' ';
+  display: block;
+  width: 36px;
+  height: 36px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -20px;
+  left: 7px;
+  background: transparent;
+  border-bottom: 1px solid maroon;
+  border-left: 1px solid maroon;
+}
+
+.top-left-triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 25px 0 0;
+  border-color: beige transparent transparent transparent;
+  display : block;
+}
+
+.bottom-left-triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 0 0 25px;
+  border-color: transparent transparent transparent beige;
+  display : block;
+}
+
+
+

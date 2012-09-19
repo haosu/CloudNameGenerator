@@ -6,6 +6,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/cat.css" rel="stylesheet">
 
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -15,11 +16,55 @@
 
   <div class="container">
 
+    <!--
     <div class="page-header">
-      <h1>Want to join the Cloud movement?</h1>
-      <h2>Create your own unique Cloud name</h2>
+      <div id="nyanCat">
+        <div id="wholeHead">
+            <div class="skin ear"></div>
+            <div class="skin ear rightEar"></div>
+            <div id="mainHead" class="skin">
+                <div class="eye"></div>
+                <div class="eye rightEye"></div>
+                <div class="nose"></div>
+                <div class="chick"></div>
+                <div class="chick rightChick"></div>
+                <div class="mouth">E</div>
+            </div>
+        </div>
+        <div id="toastBody">
+            <div>
+                &nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.&nbsp; &nbsp; &nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;.&nbsp; &nbsp; &nbsp;&nbsp&nbsp&nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.
+            </div>
+        </div>
+        <div id="wholeTail">
+            <div class="tail skin"></div>
+            <div class="tail middleTail skin"></div>
+            <div class="tail backTail skin"></div>
+        </div>
+        <div id="allYourLegAreBelongToUs">
+            <div class="skin leg back leftBack"></div>
+            <div class="skin leg back"></div>
+            <div class="skin leg front leftFront"></div>
+            <div class="skin leg front"></div>
+        </div>
+        <div class="rainbow"></div>
+        <div class="rainbow r2"></div>
+        <div class="rainbow r3"></div>
+        <div class="rainbow r4"></div>
+      </div>
     </div>
+  -->
 
+    <div class="page-header">
+      <div class="left-triangle"></div>
+      <div class="flag"></div>
+    
+      <div class="flag-tail">
+        <div class="top-left-triangle"></div>
+        <div class="bottom-left-triangle"></div>
+      </div>  
+    
+    </div>
 
     <div class="cloud-name">
       <h1>Find your Cloud name!</h1>
@@ -28,7 +73,7 @@
     <div class="hero-unit">
       <div class="cloud">
         <div id="nameField">
-          Get with the cloud
+          Get in the cloud
         </div>
       </div>
     </div>
@@ -38,18 +83,19 @@
       <div class="span4">
         <p>
           <div>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="GamerPaulW">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="GamerPaulW">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </div>
           <div>
-          <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=255364987911019";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
+            <div id="fb-root"></div>
+            <script>(function(d){
+               var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement('script'); js.id = id; js.async = true;
+                 js.src = "//connect.facebook.net/en_US/all.js";
+                 ref.parentNode.insertBefore(js, ref);
+               }(document));
+            </script>
           </div>
         </p>
         <p>
@@ -60,6 +106,10 @@
     </div>
 
   </div>
+
+  <div class="clouds"></div>
+  <div class="grass"></div>
+  <div class="dirt"></div>
 
 </body>
 </html>

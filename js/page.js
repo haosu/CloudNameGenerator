@@ -32,8 +32,42 @@ window.getProductType = function() {
   return window.productTypes[Math.floor(Math.random()*window.productTypes.length)]
 }
 
+window.cloudLoop = function() {
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+
+  var zoom = Math.random() * 0.1 + 0.3;
+  var top = (Math.random() * (windowHeight)) + 100;
+  var left = -200/zoom;
+  var opacity = (Math.random()/2)+0.25;
+  var animTime = Math.random()*10000+20000;
+  var timeout = Math.random()*3000;
+
+  var cloud = 
+    $("<div class='cloud'>").css({
+      zoom : zoom,
+      top : top,
+      left : left,
+      opacity : opacity
+    });
+
+  $(".clouds").append(cloud);
+
+  cloud.animate({
+      left : (windowWidth)/zoom
+    }, 
+    animTime,
+    function() {
+      $(this).remove();
+  });
+
+  setTimeout(window.cloudLoop, timeout);
+}
+
 $(function(){
-  $(".cloud").click(function(){
+  $(".hero-unit .cloud").click(function(){
     $(".cloud-name h1").html(window.createName());
   });
+
+  window.cloudLoop();
 });
